@@ -16,20 +16,20 @@ class NotifierListener implements Exception {
 }
 
 class NotifierListenerEvent {
-  String packageMessage;
-  String packageName;
-  String packageExtra;
-  String packageText;
-  DateTime timeStamp;
+  String? packageMessage;
+  String? packageName;
+  String? packageExtra;
+  String? packageText;
+  DateTime? timeStamp;
 
   NotifierListenerEvent({this.packageName, this.packageMessage, this.timeStamp, this.packageExtra, this.packageText});
 
   factory NotifierListenerEvent.fromMap(Map<dynamic, dynamic> map) {
     DateTime time = DateTime.now();
-    String name = map['packageName'];
-    String message = map['packageMessage'];
-    String text = map['packageText'];
-    String extra = map['packageExtra'];
+    String? name = map['packageName'];
+    String? message = map['packageMessage'];
+    String? text = map['packageText'];
+    String? extra = map['packageExtra'];
 
     return NotifierListenerEvent(packageName: name, packageMessage: message, timeStamp: time, packageText: text, packageExtra: extra);
   }
@@ -47,9 +47,9 @@ NotifierListenerEvent _notificationEvent(dynamic data) {
 class AndroidNotificationListener {
   static const EventChannel _notificationEventChannel = EventChannel('notifications.eventChannel');
 
-  Stream<NotifierListenerEvent> _notificationStream;
+  Stream<NotifierListenerEvent>? _notificationStream;
 
-  Stream<NotifierListenerEvent> get notificationStream {
+  Stream<NotifierListenerEvent>? get notificationStream {
     if (Platform.isAndroid) {
       if (_notificationStream == null) {
         _notificationStream = _notificationEventChannel.receiveBroadcastStream().map((event) => _notificationEvent(event));
