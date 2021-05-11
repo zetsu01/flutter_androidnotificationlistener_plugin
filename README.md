@@ -1,6 +1,9 @@
 # Notification Listener
 
-This plugin ( only availaible on Android due to iOS restrictions ) will allow you to listen to any incoming notifications on an Android device running on Android APi level 21 or more . In another word you can read notifications coming from all the installed applications with deep details
+This plugin is inspired by [PavieOlivier](https://pub.dev/packages/android_notification_listener2) ( only availaible on Android due to iOS restrictions ) will allow you to listen to any incoming notifications on an Android device running on Android APi level 21 or more . In another word you can read notifications coming from all the installed applications with deep details
+
+
+
 
 ## Features
 Here are the details you will get from a notification

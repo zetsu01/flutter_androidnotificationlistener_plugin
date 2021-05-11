@@ -1,8 +1,7 @@
 name: notifier_listener
-description: A new flutter plugin project.
+description: A new flutter plugin project to listen android notification event on device.
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/zetsu01/flutter_androidnotificationlistener_plugin
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
